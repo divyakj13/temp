@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>GEO LOC</title>
+</head>
+<body>
+    <p id="location"></p>
+    <script>
+
+function success(pos) {
+  var crd = pos.coords;
+  document.getElementById('location').innerText=`Your current position is: Latitude : ${crd.latitude} Longitude: ${crd.longitude} More or less ${crd.accuracy} meters.`;
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+if(!navigator.geolocation)
+{
+    document.getElementById('location').innerText="Cant access the location";
+}
+else{
+    navigator.geolocation.getCurrentPosition(success, error);
+}
+
+
+    </script>
+</body>
+</html>

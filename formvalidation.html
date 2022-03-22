@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        input[type="text"]:valid
+        {
+            background-color: green;
+        }
+        input[type="text"]:invalid
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="firstName">First Name</label>
+        <input autofocus minlength="5" maxlength="15" type="text"  id="firstName">
+        <br>
+        <label for="lastName">Last Name</label>
+        <input minlength="5" maxlength="15" type="text"  id="lastName">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="number" name="phoneNumber" id="phoneNumber">
+        <input type="submit" >        
+    </form> 
+</body>
+</html>
